@@ -68,7 +68,7 @@ int main(){
         printf("Enter Edge as (u v): ");
         scanf("%d%d",&u,&v);
         arr[u][v] = 1;
-        arr[v][u] =1;
+        arr[v][u] = 1;
     }
     
     BFS(arr,n);

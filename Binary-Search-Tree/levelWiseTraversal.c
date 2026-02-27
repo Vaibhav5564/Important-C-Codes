@@ -110,7 +110,7 @@ int main(){
     scanf("%d",&n);
     for(i=1 ; i<=n ; i++){
         printf("Enter Element %d - ",i);
-        scanf("%d",&data);
+        scanf("%d", &data);
         root=createNode(root,data);
     }
     print(root);

@@ -75,7 +75,7 @@ int main(){
     for(i=0; i<edges; i++){
         
         printf("Enter Edge as (u v): - ");
-        scanf("%d%d",&u,&v);
+        scanf("%d%d", &u, &v);
         struct node* newNode = malloc(sizeof(struct node));
         newNode->vertex = v;
         newNode->next = arr[u];
