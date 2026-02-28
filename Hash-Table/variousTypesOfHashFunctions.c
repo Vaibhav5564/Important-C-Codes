@@ -90,7 +90,7 @@ void foldMethod(int key){
     org = ind;
     
     while(fold[ind] != -1){
-        printf("\nCollision is Occured (In Folding Method)\n");
+        printf("\nCollision is Occured (In Folding Method)\n ");
         ind = (ind + 1) % MAX;
         if(org == ind){
             printf("\n\nHash Table is FULL");
