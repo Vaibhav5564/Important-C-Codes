@@ -110,7 +110,7 @@ int main(){
     printf("Enter Starting Vertex - ");
     scanf("%d",&start);
     
-    printf("\n\nDFS -");
+    printf("\n\nDFS - ");
     DFS(arr, start);
     
 }
