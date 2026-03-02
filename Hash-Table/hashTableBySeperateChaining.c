@@ -65,7 +65,6 @@ void deleteKey(int key){
     printf("\nKey is Not Present in Hash Table\n");
 }
 
-
 void display(){
     for(int i=0; i<MAX; i++){
         printf("[%d] -> ", i);
