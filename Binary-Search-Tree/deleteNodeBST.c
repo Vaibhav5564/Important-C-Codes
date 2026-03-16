@@ -1,5 +1,31 @@
 #include<stdio.h>
 #include<stdlib.h>
+
+struct node {
+    struct node* left;
+    int data;
+    struct node* right;
+};
+
+struct node* createNode(struct node* root , int data){
+    if(root == NULL){
+        root = malloc(sizeof (struct node));
+        root->data = data;
+        root->left = root->right = NULL;
+        return root;
+    }
+    if(data < root->data){
+        root->left = createNode(root->left , data);
+    }
+    else if(data > root->data){
+        root->right = createNode(root->right , data);
+    }
+    else{
+        printf("Duplicate Keys are Not Allowed\n");
+    }
+    return root;
+}
+
 struct node* deleteNode(struct node* root , int del){
     if(root == NULL){
         printf("Root is Not Present");
