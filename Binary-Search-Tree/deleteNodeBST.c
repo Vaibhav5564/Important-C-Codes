@@ -8,8 +8,8 @@ struct node {
 };
 
 // Function to find the leftmost node (in-order successor) in a given subtree
-struct node* leftMost(struct node* node) {
-    struct node* current = node;
+struct node* leftMost(struct node* r) {
+    struct node* current = r;
     while (current && current->left != NULL)
         current = current->left;
     return current;
