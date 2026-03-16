@@ -7,6 +7,23 @@ struct node {
     struct node* right;
 };
 
+// Function to find the leftmost node (in-order successor) in a given subtree
+struct node* leftMost(struct node* node) {
+    struct node* current = node;
+    while (current && current->left != NULL)
+        current = current->left;
+    return current;
+}
+
+// Function to print the binary search tree (in-order traversal used here)
+void print(struct node* root) {
+    if (root != NULL) {
+        print(root->left);
+        printf("%d ", root->data);
+        print(root->right);
+    }
+}
+
 struct node* createNode(struct node* root , int data){
     if(root == NULL){
         root = malloc(sizeof (struct node));
